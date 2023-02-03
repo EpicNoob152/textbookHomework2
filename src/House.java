@@ -10,8 +10,22 @@ import java.util.Scanner;
 public class House {
     public static void main(String [] args){
      Scanner input = new Scanner(System.in);
-        System.out.print("How long is the House? (Give me a length):  ");
+        System.out.print("How long is the House? (Give me the length): ");
+        double length = input.nextDouble();
+        System.out.print("How wide is the House? (Give me the width):  ");
+        double width =  input.nextDouble();
+        System.out.print("How tall is the House? (Give me the Height): ");
+        double height = input.nextDouble();
+        System.out.print("How many windows do you have?: ");
+        double windows = input.nextDouble();
+        System.out.print("How many doors do you have?: ");
+        double doors = input.nextDouble();
 
+        double area = length * width * height;
+        double paint = (windows * 15) + (doors * 21) + area;
+        double quarts = (paint / 87.5) % 4;
+        int gallons = (int) (paint / 350);
 
+        System.out.println("You will need " + gallons + " Gallons and " + quarts + " Quarts of paint.");
     }
 }
