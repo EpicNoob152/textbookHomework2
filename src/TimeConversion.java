@@ -10,9 +10,10 @@ import java.util.Scanner;
 public class TimeConversion {
     public static void main(String []args) {
         Scanner input = new Scanner(System.in);
+        // The code below tells the person running the program what to give it
         System.out.print("Please enter any time (in seconds):  ");
         int seconds = input.nextInt();
-
+        // This code is how I converted the seconds into hours and minutes
         int minutes = (seconds / 60) % 60;
         int hour = seconds / 3600;
         int sec = seconds % 60;
